@@ -1,0 +1,11 @@
+<div class="poem-holder">
+  <div class="card" *ngFor="let poem of poemList">
+    <div> {{ poem.title }} </div>
+    <div> {{ poem.text }} </div>
+    <hr>
+    <div class="poem-footer">
+      <app-rating [parentId]="poem._id" (ratingSelected) = "ratingSelected($event);" ></app-rating>
+      <button mat-raised-button color="primary">Rate it!!</button>
+    </div>
+  </div>
+</div>

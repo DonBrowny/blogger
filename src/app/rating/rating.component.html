@@ -1,0 +1,8 @@
+<div class="holder">
+  <div class="rating">
+    <span class="star" (click) ="click(starIndex)" (mouseenter) ="hover(starIndex)" *ngFor="let star of stars; let starIndex = index"> {{star}} </span>
+  </div>
+  <div class="emoji-holder">
+    <img id="emoji" [src]= "emoji" alt="" class="emoji">
+  </div>
+</div>

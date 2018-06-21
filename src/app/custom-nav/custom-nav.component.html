@@ -1,0 +1,35 @@
+<div class="nav-container">
+    <div class="nav-row main-row">
+      <div class="nav-left">
+        <div class="nav-item nav-icon" [ngClass]="sideNavState ? 'open' : '' " (click)="toggleSideNav();">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="nav-item">Blogger</span>
+      </div>
+      <div class="nav-right">
+        <div class="nav-item">
+          <a routerLink='' routerLinkActive='active' [routerLinkActiveOptions]="{exact:
+            true}">Poems</a>
+        </div>
+        <div class="nav-item">
+          <a routerLink='stories' routerLinkActive='active' [routerLinkActiveOptions]="{exact:
+            true}">Stories</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="nav-side center-align" [ngClass]="sideNavState ? 'open-nav' : '' ">
+        <div class="nav-item" (click)="toggleSideNav();">
+          <a routerLink='' routerLinkActive='active' [routerLinkActiveOptions]="{exact:
+            true}">Poems</a>
+        </div>
+        <div class="nav-item" (click)="toggleSideNav();">
+          <a routerLink='stories' routerLinkActive='active' [routerLinkActiveOptions]="{exact:
+            true}">Stories</a>
+        </div>
+      </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

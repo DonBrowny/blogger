@@ -1,0 +1,40 @@
+.holder {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  color: gold;
+  display: inline-flex;
+}
+
+.rating>span {
+  font-size: 3em;
+}
+
+.rating>span:hover:before,
+.rating>span:hover~span:before {
+  content: "\2605";
+  position: absolute;
+}
+
+.emoji-holder {
+  width: 30px;
+  height: 30px;
+}
+
+.emoji-holder img {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.rating:hover ~ .emoji-holder> .emoji {
+  opacity: 1;
+}
